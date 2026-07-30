@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Cloud Document Vault</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+<h1>☁ Smart Cloud Document Vault</h1>
+</header>
+<div class="container">
+
+<div class="upload-box">
+    <h2>Upload Document</h2>
+    <input type="file" id="fileInput">
+    <br><br>
+    <button onclick="uploadFile()">Upload</button>
+    <p id="status"></p>
+</div>
+
+<div class="progress">
+<h3>Upload Progress</h3>
+<progress value="0" max="100" id="progressBar"></progress>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search Documents">
+</div>
+<div class="gallery" id="gallery">
+<h2>Uploaded Documents</h2>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
